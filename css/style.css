@@ -1,0 +1,210 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Oswald:wght@200&display=swap');
+@import "reset.css";
+
+section{
+    width: 100%;
+    height: 100vh;
+    padding: 5vh 5vw;
+    /* vh위아래 vw양옆 */
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    /* 줄바꿈 */
+    background-color: #eee;
+}
+section article{
+    width: 20%;
+    height: 25%;
+    /* border: 1px solid green; */
+}
+section article.wid3{
+    width: 60%;
+}
+section article.wid3 h1,
+section article.wid3 h2{
+    font-weight: bold;
+    font-family: "Oswald";
+    line-height: 1;
+    letter-spacing: 2px;
+}
+section article.wid3 h1{
+    font-size: 26px;
+    color: #00ccff;
+    margin-bottom: 10px;
+}
+section article.wid3 h2{
+    font-size: 20px;
+    color: #7ab1ea;
+    margin-bottom: 20px;
+}
+section article.wid p{
+    width: 80%;
+    font: 14px/1.3 arial;
+    color: #999;
+}
+section article.box1{
+    padding: 30px;
+    background-color: #fff;
+}
+section article.box1 .inner{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #00ccff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section article.box1 .inner h2{
+    font: normal 50px/1 "monoton";
+    color: #00ccff;
+    margin-bottom: 10px;
+}
+section article.box1 .inner p{
+    font: 10px/1 arial;
+    color: #7ab1ea;
+    letter-spacing: 2px;
+}
+section article.box2{
+    background: linear-gradient(150deg, #00ccff, #7ab1ea);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+section article.box2 h2{
+    font: 80px/1 "monoton";
+    color: #fff;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+section article.box2 h2 span{
+    font-size: 30px;
+    margin-left: 5px;
+}
+section article.box2 p{
+   width: 100%;
+   font: 16px/1 "Oswald";
+   color: #fff;
+   letter-spacing: 2px;
+   text-align: center;
+   transition: 0.5s;
+}
+section article.box2 a{
+    width: 180px;
+    height: 30px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font: 14px/1 "Oswald";
+    color: #fff;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+section article.box2:hover h2{
+    transform: translateY(-100px);
+    opacity: 0;
+}
+section article.box2:hover p{
+    transform: translateY(100px);
+    opacity: 0;
+}
+section article.box2:hover a{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+section article.wid2{
+    width: 40%;
+}
+section article.wid2{
+    width: 40%;
+    background-color: #00ccff;
+    padding: 20px 70px;
+    display: flex;
+    align-items: center;
+}
+section article.wid2 h2,
+section article.wid2 h3{
+    font-weight: bold;
+    font-family: "Oswald";
+    line-height: 1;
+    letter-spacing: 2px;
+}
+section article.wid2 h2{
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+section article.wid2 h3{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #eee;
+}
+section article.wid2 p{
+    font: 15px/1 arial;
+    color: #fff;
+}
+section article.txt{
+    padding: 30px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+}
+section article.txt h2{
+    font: bold 18px/1 arial;
+    color: #777;
+    margin-bottom: 5px;
+}
+section article.txt p{
+    font: bold 12px/1.3 arial;
+    color: #bbb;
+}
+section article.pic img,
+section article.pic video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 사진이해당영역에맞게들어감 */
+}
+
+
+@media screen and (max-width:1399px){
+    section{
+       height: auto;
+    }
+    section article{
+        width: 33.333%;
+        height: 220px;
+    }
+    select article.wid2
+    select article.wid3{
+        width: 66.666%;
+    }
+}
+
+@media screen and (max-width:899px){
+    select article{
+        width: 50%;
+    } 
+    select article.empty{
+        display: none;
+    }
+    select article.wid2,
+    select article.wid3{
+        width: 100%;
+    }
+}
